@@ -15,3 +15,4 @@ base包对对activty fragment application和(mvp中的presenter)做了封装
 rxbase包对rxjava  rxbus以及调度器进行了处理  
 security包对常用加密 例如MD5 AES进行封装   
 utils包对常用的方法进行封装
+view包中实现常用自定义控件
