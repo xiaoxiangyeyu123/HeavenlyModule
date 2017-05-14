@@ -11,11 +11,6 @@ import com.xusangbo.basemoudle.utils.NetWorkUtils;
 
 import rx.Subscriber;
 
-/**
- * des:订阅封装
- * Created by xsf
- * on 2016.09.10:16
- */
 
 /********************使用例子********************/
 /*_apiService.login(mobile, verifyCode)

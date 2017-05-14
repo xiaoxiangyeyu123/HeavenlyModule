@@ -16,11 +16,7 @@ import rx.functions.Action1;
 import rx.subjects.PublishSubject;
 import rx.subjects.Subject;
 
-/**
- * 用RxJava实现的EventBus
- * Created by xsf
- * on 2016.08.14:50
- */
+
 public class RxBus {
     private static RxBus instance;
 
