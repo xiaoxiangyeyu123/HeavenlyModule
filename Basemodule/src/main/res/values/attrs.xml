@@ -26,40 +26,5 @@
         <attr name="stuckShadowHeight" format="dimension" />
         <attr name="stuckShadowDrawable" format="reference" />
     </declare-styleable>
-    <declare-styleable name="MorphProgressButton">
-        <attr name="progressColor" format="color"/>
-        <attr name="progressWidth" format="dimension"/>
-        <attr name="progressSize" format="dimension"/>
-        <attr name="progressFinalIcon" format="reference"/>
 
-        <attr name="buttonText" format="string"/>
-        <attr name="buttonTextSize" format="dimension"/>
-        <attr name="buttonTextAllCaps" format="boolean"/>
-        <attr name="buttonTextColor" format="color"/>
-        <attr name="buttonColorDefault" format="color"/>
-        <attr name="buttonColorPressed" format="color"/>
-        <attr name="buttonCornerRadius" format="dimension"/>
-        <attr name="buttonPaddingLeft" format="dimension"/>
-        <attr name="buttonPaddingRight" format="dimension"/>
-        <attr name="buttonPaddingTop" format="dimension"/>
-        <attr name="buttonPaddingBottom" format="dimension"/>
-    </declare-styleable>
-    <declare-styleable name="NiceSpinner">
-        <attr name="arrowTint" format="color" />
-        <attr name="hideArrow" format="boolean" />
-        <attr name="backgroundSelector" format="integer"/>
-        <attr name="textTint" format="color"/>
-    </declare-styleable>
-    <declare-styleable name="MaterialSpinner" tools:ignore="ResourceName">
-        <attr name="ms_arrow_tint" format="color"/>
-        <attr name="ms_hide_arrow" format="boolean"/>
-        <attr name="ms_background_color" format="color"/>
-        <attr name="ms_text_color" format="color"/>
-        <attr name="ms_dropdown_max_height" format="dimension"/>
-        <attr name="ms_dropdown_height" format="dimension">
-            <enum name="fill_parent" value="-1"/>
-            <enum name="match_parent" value="-1"/>
-            <enum name="wrap_content" value="-2"/>
-        </attr>
-    </declare-styleable>
 </resources>

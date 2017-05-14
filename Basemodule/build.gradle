@@ -28,7 +28,6 @@ dependencies {
     compile 'com.android.support:appcompat-v7:24.+'
     testCompile 'junit:junit:4.12'
     compile 'com.android.support:recyclerview-v7:24.+'
-    compile 'com.github.CymChad:BaseRecyclerViewAdapterHelper:2.+'
     compile 'me.yokeyword:fragmentation:0.10.0'
     //retrofit和rxjava
     compile 'com.squareup.retrofit2:retrofit:2.0.0'

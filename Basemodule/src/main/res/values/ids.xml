@@ -7,4 +7,9 @@
     <item name="toolbar_iv_menu" type="id" />
     <item name="toolbar_tv_menu" type="id" />
     <item name="base_list" type="id" />
+
+    <item name="BaseQuickAdapter_viewholder_support" type="id"/>
+    <item name="BaseQuickAdapter_swiping_support" type="id"/>
+    <item name="BaseQuickAdapter_dragging_support" type="id"/>
+    <item name="BaseQuickAdapter_databinding_support" type="id"/>
 </resources>

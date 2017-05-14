@@ -3,6 +3,7 @@
     package="com.basemoudle.sample">
 
     <application
+        android:name=".app.AppApplication"
         android:allowBackup="true"
         android:icon="@mipmap/ic_launcher"
         android:label="@string/app_name"
@@ -15,6 +16,10 @@
 
                 <category android:name="android.intent.category.LAUNCHER" />
             </intent-filter>
+        </activity>
+        <activity android:name=".activity.MVCActivity">
+    </activity>
+        <activity android:name=".activity.MVPActivity">
         </activity>
     </application>
 

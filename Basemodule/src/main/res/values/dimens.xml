@@ -7,9 +7,12 @@
     <dimen name="three_grid_unit">24dp</dimen>
     <dimen name="one_and_a_half_grid_unit">12dp</dimen>
 
-    <dimen name="ms__padding_left">24dp</dimen>
-    <dimen name="ms__padding_top">12dp</dimen>
-    <dimen name="ms__item_height">48dp</dimen>
-    <dimen name="ms__popup_padding_left">24dp</dimen>
-    <dimen name="ms__popup_padding_top">12dp</dimen>
+    <dimen name="dp_4">4dp</dimen>
+    <dimen name="dp_10">10dp</dimen>
+    <dimen name="dp_40">40dp</dimen>
+    <dimen name="dp_72">72dp</dimen>
+
+    <dimen name="sp_12">12sp</dimen>
+    <dimen name="sp_14">14sp</dimen>
+    <dimen name="sp_16">16sp</dimen>
 </resources>
