@@ -1,0 +1,65 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources xmlns:tools="http://schemas.android.com/tools">
+<!--昼夜模式主色调-->
+<attr name="dayNightBackground" format="color|reference" />
+<attr name="dayNightOneTextColor" format="color|reference" />
+<attr name="dayNightTwoTextColor" format="color|reference" />
+<attr name="dayNightThreeTextColor" format="color|reference" />
+<attr name="dayNightBackgroundDrawable" format="color|reference" />
+
+<declare-styleable name="DayNightMode">
+    <attr name="dayNightBackgroundAttr" format="string|reference"/><!--切换背景属性-->
+    <attr name="dayNightOneTextColorAttr" format="string|reference"/><!--切换一级字体颜色属性-->
+    <attr name="dayNightTwoTextColorAttr" format="string|reference"/><!--切换二级字体颜色属性-->
+    <attr name="dayNightThreeTextColorAttr" format="string|reference"/><!--切换三级字体颜色属性-->
+    <attr name="dayNightBackgroundDrawableAttr" format="string|reference"/><!--切换背景图片属性-->
+</declare-styleable>
+
+
+    <declare-styleable name="CircleImageView">
+        <attr name="civ_border_width" format="dimension" />
+        <attr name="civ_border_color" format="color" />
+        <attr name="civ_border_overlay" format="boolean" />
+        <attr name="civ_fill_color" format="color" />
+    </declare-styleable>
+    <declare-styleable name="StickyScrollView">
+        <attr name="stuckShadowHeight" format="dimension" />
+        <attr name="stuckShadowDrawable" format="reference" />
+    </declare-styleable>
+    <declare-styleable name="MorphProgressButton">
+        <attr name="progressColor" format="color"/>
+        <attr name="progressWidth" format="dimension"/>
+        <attr name="progressSize" format="dimension"/>
+        <attr name="progressFinalIcon" format="reference"/>
+
+        <attr name="buttonText" format="string"/>
+        <attr name="buttonTextSize" format="dimension"/>
+        <attr name="buttonTextAllCaps" format="boolean"/>
+        <attr name="buttonTextColor" format="color"/>
+        <attr name="buttonColorDefault" format="color"/>
+        <attr name="buttonColorPressed" format="color"/>
+        <attr name="buttonCornerRadius" format="dimension"/>
+        <attr name="buttonPaddingLeft" format="dimension"/>
+        <attr name="buttonPaddingRight" format="dimension"/>
+        <attr name="buttonPaddingTop" format="dimension"/>
+        <attr name="buttonPaddingBottom" format="dimension"/>
+    </declare-styleable>
+    <declare-styleable name="NiceSpinner">
+        <attr name="arrowTint" format="color" />
+        <attr name="hideArrow" format="boolean" />
+        <attr name="backgroundSelector" format="integer"/>
+        <attr name="textTint" format="color"/>
+    </declare-styleable>
+    <declare-styleable name="MaterialSpinner" tools:ignore="ResourceName">
+        <attr name="ms_arrow_tint" format="color"/>
+        <attr name="ms_hide_arrow" format="boolean"/>
+        <attr name="ms_background_color" format="color"/>
+        <attr name="ms_text_color" format="color"/>
+        <attr name="ms_dropdown_max_height" format="dimension"/>
+        <attr name="ms_dropdown_height" format="dimension">
+            <enum name="fill_parent" value="-1"/>
+            <enum name="match_parent" value="-1"/>
+            <enum name="wrap_content" value="-2"/>
+        </attr>
+    </declare-styleable>
+</resources>
