@@ -1,18 +1,25 @@
 package com.xusangbo.basemoudle.baserx;
 
-import rx.Observable;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.schedulers.Schedulers;
+import org.reactivestreams.Publisher;
+
+import io.reactivex.Flowable;
+import io.reactivex.FlowableTransformer;
+import io.reactivex.schedulers.Schedulers;
+import io.reactivex.android.schedulers.AndroidSchedulers;
 
 
 public class RxSchedulers {
-    public static <T> Observable.Transformer<T, T> io_main() {
-        return new Observable.Transformer<T, T>() {
+
+    public static <T> FlowableTransformer<T, T> io_main() {
+
+        return new FlowableTransformer<T, T>() {
+
             @Override
-            public Observable<T> call(Observable<T> observable) {
-                return observable.subscribeOn(Schedulers.io())
+            public Publisher<T> apply(Flowable<T> upstream) {
+                return upstream.subscribeOn(Schedulers.io())
                         .observeOn(AndroidSchedulers.mainThread());
             }
         };
     }
+
 }

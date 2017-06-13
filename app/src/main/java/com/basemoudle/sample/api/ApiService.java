@@ -5,6 +5,7 @@ package com.basemoudle.sample.api;
 import com.basemoudle.sample.bean.User;
 import com.xusangbo.basemoudle.base.BaseRespose;
 
+import io.reactivex.Flowable;
 import retrofit2.http.POST;
 import rx.Observable;
 
@@ -14,5 +15,5 @@ import rx.Observable;
 
 public interface ApiService {
     @POST("Home/User/login")
-    Observable<BaseRespose<User>> postData();
+    Flowable<BaseRespose<User>> postData();
 }

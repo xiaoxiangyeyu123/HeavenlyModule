@@ -20,7 +20,7 @@ import com.xusangbo.basemoudle.dialog.LoadingDialog;
 import com.xusangbo.basemoudle.utils.TUtil;
 import com.xusangbo.basemoudle.utils.ToastUtils;
 import com.xusangbo.basemoudle.utils.daynightutils.ChangeModeController;
-import com.xusangbo.basemoudle.weight.StatusBarCompat;
+import com.xusangbo.basemoudle.widght.StatusBarCompat;
 
 import butterknife.ButterKnife;
 import butterknife.Unbinder;

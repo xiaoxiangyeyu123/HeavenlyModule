@@ -6,8 +6,8 @@ import android.support.v7.widget.LinearLayoutManager;
 import android.support.v7.widget.RecyclerView;
 import android.support.v7.widget.StaggeredGridLayoutManager;
 import com.xusangbo.basemodule.R;
-import com.xusangbo.basemoudle.weight.baseadapter.BaseQuickAdapter;
-import com.xusangbo.basemoudle.weight.baseadapter.BaseViewHolder;
+import com.xusangbo.basemoudle.widght.baseadapter.BaseQuickAdapter;
+import com.xusangbo.basemoudle.widght.baseadapter.BaseViewHolder;
 
 import java.util.ArrayList;
 import java.util.List;

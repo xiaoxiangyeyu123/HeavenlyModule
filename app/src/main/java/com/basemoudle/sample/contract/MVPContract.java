@@ -6,6 +6,7 @@ import com.xusangbo.basemoudle.base.BasePresenter;
 import com.xusangbo.basemoudle.base.BaseRespose;
 import com.xusangbo.basemoudle.base.BaseView;
 
+import io.reactivex.Flowable;
 import rx.Observable;
 
 /**
@@ -16,7 +17,7 @@ public interface MVPContract {
 
     interface Model extends BaseModel {
 
-        Observable<BaseRespose<User>> postData();
+        Flowable<BaseRespose<User>> postData();
     }
 
     interface View extends BaseView {

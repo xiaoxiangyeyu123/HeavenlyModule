@@ -1,59 +1,63 @@
 package com.xusangbo.basemoudle.baserx;
 
+import android.support.annotation.NonNull;
+
 import java.util.HashMap;
 import java.util.Map;
+import java.util.Set;
 
+import io.reactivex.Flowable;
+import io.reactivex.android.schedulers.AndroidSchedulers;
+import io.reactivex.disposables.CompositeDisposable;
+import io.reactivex.disposables.Disposable;
+import io.reactivex.functions.Consumer;
 import rx.Observable;
-import rx.Subscription;
-import rx.android.schedulers.AndroidSchedulers;
-import rx.functions.Action1;
-import rx.subscriptions.CompositeSubscription;
 
 
 public class RxManager {
     public RxBus mRxBus = RxBus.getInstance();
     //管理rxbus订阅
-    private Map<String, Observable<?>> mObservables = new HashMap<>();
+   // private Map<Class<?>, Flowable<?>> mFlowable = new HashMap<>();
     /*管理Observables 和 Subscribers订阅*/
-    private CompositeSubscription mCompositeSubscription = new CompositeSubscription();
+    private CompositeDisposable  mCompositeDisposable = new CompositeDisposable();
 
     /**
      * RxBus注入监听
      * @param eventName
-     * @param action1
+     * @param consumer
      */
-    public <T>void on(String eventName, Action1<T> action1) {
-        Observable<T> mObservable = mRxBus.register(eventName);
-        mObservables.put(eventName, mObservable);
+    public <T>void on(Class<T> eventName, Consumer consumer) {
+        Flowable<T> register = mRxBus.register(eventName);
+     //   mFlowable.put(eventName, register);
         /*订阅管理*/
-        mCompositeSubscription.add(mObservable.observeOn(AndroidSchedulers.mainThread())
-                .subscribe(action1, new Action1<Throwable>() {
-                    @Override
-                    public void call(Throwable throwable) {
-                        throwable.printStackTrace();
-                    }
-                }));
+
+        register.observeOn(AndroidSchedulers.mainThread()).subscribe(consumer, new Consumer<Throwable>() {
+            @Override
+            public void accept(Throwable throwable) throws Exception {
+                throwable.printStackTrace();
+            }
+        });
     }
 
     /**
      * 单纯的Observables 和 Subscribers管理
      * @param m
      */
-    public void add(Subscription m) {
+    public void add(Disposable m) {
         /*订阅管理*/
-        mCompositeSubscription.add(m);
+        mCompositeDisposable.add(m);
     }
     /**
      * 单个presenter生命周期结束，取消订阅和所有rxbus观察
      */
     public void clear() {
-        mCompositeSubscription.unsubscribe();// 取消所有订阅
-        for (Map.Entry<String, Observable<?>> entry : mObservables.entrySet()) {
-            mRxBus.unregister(entry.getKey(), entry.getValue());// 移除rxbus观察
-        }
+        mRxBus.unregisterAll();
+
+        mCompositeDisposable.clear();// 取消所有订阅
+
     }
     //发送rxbus
-    public void post(Object tag, Object content) {
-        mRxBus.post(tag, content);
+    public void post(@NonNull Object obj) {
+        mRxBus.post(obj);
     }
 }
