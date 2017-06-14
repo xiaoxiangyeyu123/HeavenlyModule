@@ -9,6 +9,8 @@ import com.xusangbo.basemoudle.base.BaseApplication;
 import com.xusangbo.basemoudle.dialog.LoadingDialog;
 import com.xusangbo.basemoudle.utils.NetWorkUtils;
 
+import io.reactivex.subscribers.DisposableSubscriber;
+import io.reactivex.subscribers.ResourceSubscriber;
 import rx.Subscriber;
 
 
@@ -25,7 +27,7 @@ public void _onNext(User user) {
 public void _onError(String msg) {
         ToastUtil.showShort(mActivity, msg);
         });*/
-public abstract class RxSubscriber<T> extends Subscriber<T> {
+public abstract class RxSubscriber<T> extends DisposableSubscriber<T> {
 
     private Context mContext;
     private String msg;
@@ -54,7 +56,7 @@ public abstract class RxSubscriber<T> extends Subscriber<T> {
     }
 
     @Override
-    public void onCompleted() {
+    public void onComplete() {
         if (showDialog)
             LoadingDialog.cancelLoadingDialog();
     }
